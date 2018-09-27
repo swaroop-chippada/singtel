@@ -1,15 +1,11 @@
 package com.assessment;
 
-abstract class Fish {
-	
+public class Fish extends SwimmingFish {
+
 	private String size;
 	private String color;
 	private boolean doesCrackJokes;
 	private boolean doesEatOtherFish;
-
-	void swim() {
-		System.out.println("i can swim");
-	}
 
 	public String getSize() {
 		return size;
