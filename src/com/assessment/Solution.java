@@ -1,11 +1,8 @@
 package com.assessment;
 
-import com.test.Bird;
-import com.test.Mammal;
-
 public class Solution {
 	public static void main(String[] args) {
-		Bird someBird = new Bird() {
+		SingingBird someBird = new SingingBird() {
 
 			@Override
 			public void sing() {
@@ -18,7 +15,7 @@ public class Solution {
 		someBird.walk();
 		
 		
-		Bird duck = new Bird() {
+		SingingBird duck = new SingingBird() {
 
 			@Override
 			public void sing() {
@@ -58,7 +55,7 @@ public class Solution {
 		
 		
 		
-		Bird parrot1 = new Bird() {
+		SingingBird parrot1 = new SingingBird() {
 
 			@Override
 			public void sing() {
@@ -70,7 +67,7 @@ public class Solution {
 		parrot1.sing();
 		parrot1.walk();
 
-		Bird parrot2 = new Bird() {
+		SingingBird parrot2 = new SingingBird() {
 
 			@Override
 			public void sing() {
@@ -82,7 +79,7 @@ public class Solution {
 		parrot2.sing();
 		parrot2.walk();
 
-		Bird parrot3 = new Bird() {
+		SingingBird parrot3 = new SingingBird() {
 
 			@Override
 			public void sing() {
