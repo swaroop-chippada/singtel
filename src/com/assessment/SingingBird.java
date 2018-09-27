@@ -1,5 +1,5 @@
 package com.assessment;
 
-abstract class SingingBird extends BaseBird implements CanSing {
+abstract class SingingBird extends Bird implements CanSing {
 	
 }

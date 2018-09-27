@@ -1,5 +1,7 @@
 package com.assessment;
 
-public class Bird extends BaseBird{
-
+abstract class Bird extends Animal {
+	void fly() {
+		System.out.println("I am flying");
+	}
 }
