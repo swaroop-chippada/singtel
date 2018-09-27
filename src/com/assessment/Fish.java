@@ -1,6 +1,6 @@
 package com.assessment;
 
-public class Fish extends SwimmingFish {
+public class Fish extends SwimmingAnimal implements LivingThings {
 
 	private String size;
 	private String color;

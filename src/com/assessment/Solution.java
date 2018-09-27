@@ -2,95 +2,98 @@ package com.assessment;
 
 public class Solution {
 	public static void main(String[] args) {
-		SingingBird someBird = new SingingBird() {
+
+		LivingThings bird = new Bird();
+		LivingThings duck = new SingingBird() {
 
 			@Override
 			public void sing() {
 				// TODO Auto-generated method stub
-				System.out.println("some Bird");
+
 			}
 		};
-		someBird.fly();
-		someBird.sing();
-		someBird.walk();
-		
-		
-		SingingBird duck = new SingingBird() {
+
+		LivingThings chicken = new Mammal() {
 
 			@Override
 			public void sing() {
 				// TODO Auto-generated method stub
-				System.out.println("“Quack, quack");
+
 			}
 		};
-		duck.fly();
-		duck.sing();
-		duck.walk();
 
-		Mammal chicken = new Mammal() {
+		LivingThings rooster = new Mammal() {
 
 			@Override
 			public void sing() {
 				// TODO Auto-generated method stub
-				System.out.println("Cluck, cluck");
+
 			}
 		};
-		chicken.sing();
-		chicken.walk();
-		
-		
-		Mammal rooster = new Mammal() {
+
+		LivingThings parrot = new SingingBird() {
 
 			@Override
 			public void sing() {
 				// TODO Auto-generated method stub
-				System.out.println("Cock-a-doodle-doo”");
+				System.out.println("Woof");
 			}
 		};
-		
-		rooster.setMale(true);
 
-		rooster.sing();
-		rooster.walk();
-		
-		
-		
-		SingingBird parrot1 = new SingingBird() {
+		LivingThings fish = new Fish();
 
-			@Override
-			public void sing() {
-				// TODO Auto-generated method stub
-				System.out.println("Woof, woof");
+		Fish shark = new Fish();
+		shark.setColor("Grey");
+		shark.setDoesEatOtherFish(true);
+		shark.setSize("Large");
+
+		Fish clownFish = new Fish();
+		clownFish.setDoesCrackJokes(true);
+		clownFish.setColor("Orange");
+		clownFish.setSize("small");
+
+		LivingThings dolphin = new SwimmingAnimal();
+
+		LivingThings frog = new SwimmingAnimal();
+
+		LivingThings dog = new Animal();
+
+		LivingThings butterfly = new Bird();
+
+		LivingThings cat = new Animal();
+
+		LivingThings[] animals = new LivingThings[] { bird, duck, chicken, rooster, parrot, fish, shark, clownFish,
+				dolphin, frog, dog, butterfly, cat };
+
+		int flies = 0;
+		int walk = 0;
+		int sing = 0;
+		int swim = 0;
+
+		for (LivingThings livingThings : animals) {
+
+			if (livingThings instanceof Bird) {
+				flies++;
 			}
-		};
-		parrot1.fly();
-		parrot1.sing();
-		parrot1.walk();
 
-		SingingBird parrot2 = new SingingBird() {
-
-			@Override
-			public void sing() {
-				// TODO Auto-generated method stub
-				System.out.println("Meow");
+			if (livingThings instanceof Animal) {
+				walk++;
 			}
-		};
-		parrot2.fly();
-		parrot2.sing();
-		parrot2.walk();
 
-		SingingBird parrot3 = new SingingBird() {
-
-			@Override
-			public void sing() {
-				// TODO Auto-generated method stub
-				System.out.println("Cock-a-doodle-doo");
+			if (livingThings instanceof CanSing) {
+				sing++;
 			}
-		};
-		
-		parrot3.fly();
-		parrot3.sing();
-		parrot3.walk();
+
+			if (livingThings instanceof SwimmingAnimal) {
+				swim++;
+			}
+
+		}
+
+		System.out.println("flies" + flies);
+		System.out.println("walk" + walk);
+		System.out.println("sing" + sing);
+		System.out.println("swim" + swim);
 
 	}
 }

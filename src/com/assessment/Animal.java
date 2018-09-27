@@ -1,6 +1,6 @@
 package com.assessment;
 
-abstract class Animal {
+class Animal implements LivingThings{
 	
 	private boolean isTransformable;
 	
