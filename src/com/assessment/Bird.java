@@ -1,6 +1,6 @@
 package com.assessment;
 
-class Bird extends Animal {
+abstract class Bird extends Animal implements CanSing {
 	void fly() {
 		System.out.println("I am flying");
 	}
